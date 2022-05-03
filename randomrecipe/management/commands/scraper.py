@@ -81,9 +81,6 @@ class Command(BaseCommand):
                 instruction = instruction.replace(",", "").replace(", ", "")
                 instructions_list.append(instruction)
 
-            print(instructions_list)
-            print(ingredients_list)
-
             recipe = Recipe(name=recipe_name, link=link, ingredients=ingredients_list, instructions=instructions_list)
             recipe.save()
 
